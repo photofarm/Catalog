@@ -29,6 +29,7 @@
 		33AADC1F1BD8BD6200FBF1BF /* shopping-cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AADC1E1BD8BD6200FBF1BF /* shopping-cart.png */; };
 		33AADC211BD8BE6000FBF1BF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AADC201BD8BE6000FBF1BF /* ProductCell.swift */; };
 		33AADC231BD8C0B300FBF1BF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AADC221BD8C0B300FBF1BF /* Product.swift */; };
+		33AADC251BD8CB8200FBF1BF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AADC241BD8CB8200FBF1BF /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		33AADC1E1BD8BD6200FBF1BF /* shopping-cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping-cart.png"; sourceTree = "<group>"; };
 		33AADC201BD8BE6000FBF1BF /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		33AADC221BD8C0B300FBF1BF /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		33AADC241BD8CB8200FBF1BF /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				33AADBE31BD8BBF800FBF1BF /* Info.plist */,
 				33AADC201BD8BE6000FBF1BF /* ProductCell.swift */,
 				33AADC221BD8C0B300FBF1BF /* Product.swift */,
+				33AADC241BD8CB8200FBF1BF /* Cart.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			files = (
 				33AADC211BD8BE6000FBF1BF /* ProductCell.swift in Sources */,
 				33AADC231BD8C0B300FBF1BF /* Product.swift in Sources */,
+				33AADC251BD8CB8200FBF1BF /* Cart.swift in Sources */,
 				33AADBDA1BD8BBF800FBF1BF /* ViewController.swift in Sources */,
 				33AADBD81BD8BBF800FBF1BF /* AppDelegate.swift in Sources */,
 			);
@@ -552,6 +556,7 @@
 				33AADBFE1BD8BBF800FBF1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33AADBFF1BD8BBF800FBF1BF /* Build configuration list for PBXNativeTarget "CatalogTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +565,7 @@
 				33AADC011BD8BBF800FBF1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33AADC021BD8BBF800FBF1BF /* Build configuration list for PBXNativeTarget "CatalogUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +574,7 @@
 				33AADC041BD8BBF800FBF1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

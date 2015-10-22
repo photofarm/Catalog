@@ -8,10 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, ProductCellDelegate {
 
+    @IBOutlet weak var productTable: UITableView!
+	
 	var productList : [Product]!
+	var cartList : [Cart]!
+	var numberOfSections : Int = 1
 
+	func addCart(productCode: String) {
+		numberOfSections = 2;
+		
+		if numberOfSections > 1 {
+			productTable.reloadData()
+		}
+		
+		print(productCode)
+	}
+	
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return numberOfSections
+	}
+
+	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		var title : String!
+		
+		if section == 0 {
+			title = "Catalog"
+		} else {
+			title = "Cart"
+		}
+		
+		return title
+	}
+	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return productList.count
 	}
@@ -27,7 +57,7 @@ class ViewController: UIViewController {
 		cell.productCode = product.code
 		
 		// 셀 델리게이트 설정
-//		cell.delegate = self
+		cell.delegate = self
 		
 		return cell
 	}
