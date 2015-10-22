@@ -9,19 +9,13 @@
 import Foundation
 
 class Cart {
-	var code : String!
-	var name : String!
-	var price : String!
-	var image : String!
-	var count : Int!
+	var productCode : String!
+	var productCount : Int!
 	
 	
 	// Designated Initalizer
-	init(code : String, name : String, price : String, image : String, count : Int) {
-		self.code = code
-		self.name = name
-		self.price = price
-		self.image = image
-		self.count = count
+	init(productCode : String, productCount : Int) {
+		self.productCode = productCode
+		self.productCount = productCount
 	}
 }
