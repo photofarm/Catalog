@@ -10,12 +10,14 @@ import Foundation
 
 class Cart {
 	var productCode : String!
+	var productName : String!
 	var productCount : Int!
 	
 	
 	// Designated Initalizer
-	init(productCode : String, productCount : Int) {
+	init(productCode : String, productName : String, productCount : Int) {
 		self.productCode = productCode
+		self.productName = productName
 		self.productCount = productCount
 	}
 }
