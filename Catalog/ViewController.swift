@@ -13,12 +13,16 @@ class ViewController: UIViewController, UITableViewDataSource, ProductCellDelega
     @IBOutlet weak var productTable: UITableView!
 	
 	var productList : [Product]!
-	var cartList : [Cart]!
+	var cartList : [Cart] = [Cart]()
 	var numberOfSections : Int = 1
 
-	func addCart(productCode: String) {
+	func addCart(productCode: String, productName : String) {
 		numberOfSections = 2;
 		
+//		cartList += [Cart(productCode: productCode, productCount: 1)]
+//		cartList.append(Cart(productCode: productCode, productName: productName, productCount: 1))
+		cartList.insert(Cart(productCode: productCode, productName: productName, productCount: 1), atIndex: 0)
+
 		if numberOfSections > 1 {
 			productTable.reloadData()
 		}
@@ -43,21 +47,29 @@ class ViewController: UIViewController, UITableViewDataSource, ProductCellDelega
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return productList.count
+		return (section == 0 ? productList.count : cartList.count)
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell : ProductCell = tableView.dequeueReusableCellWithIdentifier("PRODUCT_CELL", forIndexPath: indexPath) as! ProductCell
+		let cellID : String = (indexPath.section == 0 ? "PRODUCT_CELL" : "CART_CELL")
+		let cell : ProductCell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! ProductCell
 		
-		let product = productList[indexPath.row]
-		cell.productName.text = product.name
-		cell.productPrice.text = product.price
-		cell.productImage.image = UIImage(named: product.image)
-		
-		cell.productCode = product.code
-		
-		// 셀 델리게이트 설정
-		cell.delegate = self
+
+		if indexPath.section == 0 {
+			let product = productList[indexPath.row]
+			cell.productName.text = product.name
+			cell.productPrice.text = product.price
+			cell.productImage.image = UIImage(named: product.image)
+			
+			cell._productCode = product.code
+			cell._productName = product.name
+			
+			// 셀 델리게이트 설정
+			cell.delegate = self
+		} else {
+			let product = cartList[indexPath.row]
+			cell.textLabel?.text = product.productName;
+		}
 		
 		return cell
 	}
