@@ -9,13 +9,14 @@
 import UIKit
 
 protocol ProductCellDelegate : class {
-	func addCart(productCode : String)
+	func addCart(productCode : String, productName : String)
 }
 
 class ProductCell: UITableViewCell {
 
 	weak var delegate : ProductCellDelegate!
-	var productCode: String!
+	var _productCode: String!
+	var _productName: String!
 
 	@IBOutlet weak var productImage: UIImageView!
 	@IBOutlet weak var productName: UILabel!
@@ -23,7 +24,7 @@ class ProductCell: UITableViewCell {
 	@IBOutlet weak var addCart: UIButton!
 	
 	@IBAction func addCart(sender: UIButton) {
-		delegate.addCart(productCode)
+		delegate.addCart(_productCode, productName: _productName)
 	}
 	
     override func awakeFromNib() {
