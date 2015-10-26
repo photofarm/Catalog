@@ -141,7 +141,7 @@
         <!-- 장바구니-->
         <scene sceneID="1s3-Ta-SFm">
             <objects>
-                <viewController id="ZV1-DU-ibh" sceneMemberID="viewController">
+                <viewController id="ZV1-DU-ibh" customClass="CartViewController" customModule="Catalog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZWs-1B-voU"/>
                         <viewControllerLayoutGuide type="bottom" id="SPD-ES-FgE"/>
@@ -165,6 +165,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="Id3-oI-Njh">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Id3-oI-Njh" id="fQK-h4-Obt">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-7a-NUc">
@@ -239,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="1284" y="732"/>
         </scene>
-        <!--상품명-->
+        <!--상품상세-->
         <scene sceneID="WFK-vm-81s">
             <objects>
-                <viewController id="sPS-MN-cdv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PRODUCT_DETAIL" id="sPS-MN-cdv" customClass="DetailViewController" customModule="Catalog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DqH-Dd-u66"/>
                         <viewControllerLayoutGuide type="bottom" id="qbR-a9-syx"/>
@@ -268,10 +269,10 @@
                                 <exclude reference="BVK-tr-XCO"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="vUa-85-LXC"/>
                                 <exclude reference="JoV-it-def"/>
                                 <exclude reference="Rsd-yG-D8V"/>
                                 <exclude reference="Z7u-iF-1em"/>
-                                <exclude reference="vUa-85-LXC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -279,14 +280,17 @@
                                 <include reference="BVK-tr-XCO"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="vUa-85-LXC"/>
                                 <include reference="JoV-it-def"/>
                                 <include reference="Rsd-yG-D8V"/>
                                 <include reference="Z7u-iF-1em"/>
-                                <include reference="vUa-85-LXC"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="상품명" id="Ki9-bo-zPq"/>
+                    <navigationItem key="navigationItem" title="상품상세" id="Ki9-bo-zPq"/>
+                    <connections>
+                        <outlet property="webView" destination="BVK-tr-XCO" id="XvR-Fg-fdc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7T-eJ-e50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
