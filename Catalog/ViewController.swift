@@ -79,16 +79,16 @@ class ViewController: UIViewController, UITableViewDataSource, ProductCellDelega
         // Do any additional setup after loading the view, typically from a nib.
 
 		productList = [
-			Product(code: "001", name: "Baseball", price: "100", image: "Baseball"),
-			Product(code: "002", name: "Basketball", price: "200", image: "Basketball"),
-			Product(code: "003", name: "Football", price: "300", image: "Football"),
-			Product(code: "004", name: "Golf", price: "400", image: "Golf"),
-			Product(code: "005", name: "Rugby", price: "500", image: "Rugby"),
-			Product(code: "006", name: "Tennis", price: "600", image: "Tennis"),
-			Product(code: "007", name: "Volleyball", price: "700", image: "Volleyball"),
-			Product(code: "008", name: "TableTennis", price: "800", image: "TableTennis"),
-			Product(code: "009", name: "IceHockey", price: "800", image: "IceHockey"),
-			Product(code: "010", name: "Billiard", price: "800", image: "Billiard"),
+			Product(code: "001", name: "Baseball", price: "100", image: "Baseball", url:"https://ko.wikipedia.org/wiki/%EC%95%BC%EA%B5%AC"),
+			Product(code: "002", name: "Basketball", price: "200", image: "Basketball", url:"https://ko.wikipedia.org/wiki/%EB%86%8D%EA%B5%AC"),
+			Product(code: "003", name: "Football", price: "300", image: "Football", url:"https://ko.wikipedia.org/wiki/%EC%B6%95%EA%B5%AC"),
+			Product(code: "004", name: "Golf", price: "400", image: "Golf", url:"https://ko.wikipedia.org/wiki/%EA%B3%A8%ED%94%84"),
+			Product(code: "005", name: "Rugby", price: "500", image: "Rugby", url:"https://ko.wikipedia.org/wiki/%EB%9F%AD%EB%B9%84"),
+			Product(code: "006", name: "Tennis", price: "600", image: "Tennis", url:"https://ko.wikipedia.org/wiki/%ED%85%8C%EB%8B%88%EC%8A%A4"),
+			Product(code: "007", name: "Volleyball", price: "700", image: "Volleyball", url:"https://ko.wikipedia.org/wiki/%EB%B0%B0%EA%B5%AC"),
+			Product(code: "008", name: "TableTennis", price: "800", image: "TableTennis", url:"https://ko.wikipedia.org/wiki/%ED%83%81%EA%B5%AC"),
+			Product(code: "009", name: "IceHockey", price: "800", image: "IceHockey", url:"https://ko.wikipedia.org/wiki/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%95%98%ED%82%A4"),
+			Product(code: "010", name: "Billiard", price: "800", image: "Billiard", url:"https://ko.wikipedia.org/wiki/%EB%8B%B9%EA%B5%AC"),
 		]
 	}
 
