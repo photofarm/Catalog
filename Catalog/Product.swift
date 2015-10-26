@@ -13,13 +13,15 @@ class Product {
 	var name : String!
 	var price : String!
 	var image : String!
+	var url : String!
 	
 	
 	// Designated Initalizer
-	init(code : String, name : String, price : String, image : String) {
+	init(code : String, name : String, price : String, image : String, url:String) {
 		self.code = code
 		self.name = name
 		self.price = price
 		self.image = image
+		self.url = url
 	}
 }
