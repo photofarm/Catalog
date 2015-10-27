@@ -12,17 +12,15 @@ import RealmSwift
 class Cart {
 
 	static let sharedInstance = Cart()
-	var cart:[(productName: String, count: Int)] = []
+	var cartItem : Results<CartItem>!
 	
 	func removeCart(prodName : String) {
 		
 	}
 
-	func retriveCart() -> Results<CartItem> {
+	func retriveCart() {
 		let realm = try! Realm()
-		let cartItem = realm.objects(CartItem)
-		
-		return cartItem
+		cartItem = realm.objects(CartItem)
 	}
 
 	func addCart(prodName : String) {

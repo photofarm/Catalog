@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import RealmSwift
 
-class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CartCellDelegate {
 
     @IBOutlet weak var table카트: UITableView!
-	var cartItem : Results<CartItem>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +18,20 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Do any additional setup after loading the view.
     }
 
+	func addProduct(prodName: String) {
+		<#code#>
+	}
+	
+	func removeProduct(prodName: String) {
+		<#code#>
+	}
+	
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		// DB 읽어오기
-		cartItem = Cart.sharedInstance.retriveCart()
-
+		Cart.sharedInstance.retriveCart()
 		table카트.reloadData()
-}
+	}
 
 	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,15 +39,15 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		let 행수 = (cartItem == nil ? 0 : cartItem.count)
+		let 행수 = (Cart.sharedInstance.cartItem == nil ? 0 : Cart.sharedInstance.cartItem.count)
 
 		return 행수
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("CART_CELL", forIndexPath: indexPath) as! CartCell
-		let 상품명 = cartItem[indexPath.row].prodName
-		let 카운트 = cartItem[indexPath.row].prodCount
+		let 상품명 = Cart.sharedInstance.cartItem[indexPath.row].prodName
+		let 카운트 = Cart.sharedInstance.cartItem[indexPath.row].prodCount
 
 		cell.label상품명.text = 상품명
 		cell.label카운트.text = String(카운트)
