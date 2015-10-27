@@ -24,8 +24,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		super.viewWillAppear(animated)
 		
 		// DB 읽어오기
-		let realm = try! Realm()
-		cartItem = realm.objects(CartItem)
+		cartItem = Cart.sharedInstance.retriveCart()
 
 		table카트.reloadData()
 }

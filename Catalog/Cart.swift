@@ -18,6 +18,13 @@ class Cart {
 		
 	}
 
+	func retriveCart() -> Results<CartItem> {
+		let realm = try! Realm()
+		let cartItem = realm.objects(CartItem)
+		
+		return cartItem
+	}
+
 	func addCart(prodName : String) {
 		let cartItem = CartItem()
 		cartItem.prodName = prodName

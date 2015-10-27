@@ -18,15 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	var numberOfSections : Int = 1
 
 	func addCart(productCode: String, productName : String) {
-//		numberOfSections = 2;
-//		
-////		cartList += [Cart(productCode: productCode, productCount: 1)]
-////		cartList.append(Cart(productCode: productCode, productName: productName, productCount: 1))
-//		cartList.insert(Cart(productCode: productCode, productName: productName, productCount: 1), atIndex: 0)
-//
-//		if numberOfSections > 1 {
-//			productTable.reloadData()
-//		}
 		Cart.sharedInstance.addCart(productName)
 		
 		print(productCode)
