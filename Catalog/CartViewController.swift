@@ -19,11 +19,11 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
 	func addProduct(prodName: String) {
-		<#code#>
+		
 	}
 	
 	func removeProduct(prodName: String) {
-		<#code#>
+		
 	}
 	
 	override func viewWillAppear(animated: Bool) {
@@ -39,7 +39,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		let 행수 = (Cart.sharedInstance.cartItem == nil ? 0 : Cart.sharedInstance.cartItem.count)
+		let 행수 = Cart.sharedInstance.cartItem.count
 
 		return 행수
 	}

@@ -12,8 +12,13 @@ import RealmSwift
 class Cart {
 
 	static let sharedInstance = Cart()
-	var cartItem : Results<CartItem>!
-	
+	var cartItem : Results<CartItem>
+
+	init() {
+		let realm = try! Realm()
+		cartItem = realm.objects(CartItem)
+	}
+
 	func removeCart(prodName : String) {
 		
 	}
@@ -27,11 +32,19 @@ class Cart {
 		let cartItem = CartItem()
 		cartItem.prodName = prodName
 		cartItem.prodCount = 1
+		var isFind = false
+		
+		for var id = 0; id < self.cartItem.count; id++ {
+			if self.cartItem[id].prodName == prodName {
+				isFind = true
+				break
+			}
+		}
 		
 		// DB 저장
 		let realm = try! Realm()
 		try! realm.write {
-			realm.add(cartItem)
+			realm.add(cartItem, update: isFind)
 		}
 	}
 }
