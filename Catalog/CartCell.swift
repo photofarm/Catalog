@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol CartCellDelegate : class {
+	func addProduct(prodName : String)
+	func removeProduct(prodName : String)
+}
+
 class CartCell: UITableViewCell {
+
+	weak var delegate : CartCellDelegate!
 
 	@IBOutlet weak var label상품명: UILabel!
 	@IBOutlet weak var label카운트: UILabel!

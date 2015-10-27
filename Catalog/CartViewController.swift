@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table카트: UITableView!
+	var cartItem : Results<CartItem>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,24 +23,31 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		
+		// DB 읽어오기
+		let realm = try! Realm()
+		cartItem = realm.objects(CartItem)
+
 		table카트.reloadData()
-	}
-    override func didReceiveMemoryWarning() {
+}
+
+	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		let 행수 = Cart.sharedInstance.cart.count
+		let 행수 = (cartItem == nil ? 0 : cartItem.count)
 
 		return 행수
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("CART_CELL", forIndexPath: indexPath) as! CartCell
-		let 상품명 = Cart.sharedInstance.cart[indexPath.row].productName
+		let 상품명 = cartItem[indexPath.row].prodName
+		let 카운트 = cartItem[indexPath.row].prodCount
 
 		cell.label상품명.text = 상품명
+		cell.label카운트.text = String(카운트)
 
 		return cell
 	}
