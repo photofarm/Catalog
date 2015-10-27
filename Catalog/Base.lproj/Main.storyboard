@@ -10,7 +10,7 @@
         <!-- 상품목록-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Catalog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Catalog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -89,43 +89,39 @@
                                             <segue destination="sPS-MN-cdv" kind="show" id="Cw6-dz-Qdv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CART_CELL" textLabel="IhE-j4-ldf" rowHeight="79" style="IBUITableViewCellStyleDefault" id="N17-bC-F0A" customClass="ProductCell" customModule="Catalog" customModuleProvider="target">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N17-bC-F0A" id="yxG-eD-PC6">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="78"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IhE-j4-ldf">
-                                                    <rect key="frame" x="15" y="0.0" width="210" height="78"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="687"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="67q-LP-DHr"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LOG-P0-shf" secondAttribute="trailing" constant="-20" id="8kh-Bv-fap"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LOG-P0-shf" secondAttribute="bottom" id="J8w-Qa-a20"/>
+                            <constraint firstItem="LOG-P0-shf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KGL-KM-Z3q"/>
+                            <constraint firstItem="LOG-P0-shf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="d04-J8-Om8"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="LOG-P0-shf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8kh-Bv-fap"/>
+                                <exclude reference="KGL-KM-Z3q"/>
+                                <exclude reference="d04-J8-Om8"/>
+                                <exclude reference="J8w-Qa-a20"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="LOG-P0-shf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8kh-Bv-fap"/>
+                                <include reference="KGL-KM-Z3q"/>
+                                <include reference="d04-J8-Om8"/>
+                                <include reference="J8w-Qa-a20"/>
                             </mask>
                         </variation>
                     </view>
@@ -158,39 +154,82 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HWW-t3-r3f"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WVz-bN-qrT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WVz-bN-qrT">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="Id3-oI-Njh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CART_CELL" rowHeight="66" id="Id3-oI-Njh" customClass="CartCell" customModule="Catalog" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Id3-oI-Njh" id="fQK-h4-Obt">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="73"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9b-rW-TzM">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" image="Minus-32.png"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="359" y="17" width="32" height="32"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="button삭제:" destination="Id3-oI-Njh" eventType="touchUpInside" id="qZp-oU-7cH"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa0-b1-9Zt">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <state key="normal" image="Plus-32.png"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="319" y="17" width="32" height="32"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="button추가:" destination="Id3-oI-Njh" eventType="touchUpInside" id="Zjm-9i-0kI"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whX-nS-lBT">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.43983981649999998" green="0.47600181139999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="40" width="36" height="17"/>
+                                                    </variation>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVS-7a-NUc">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="14" width="303" height="21"/>
+                                                        <rect key="frame" x="8" y="11" width="288" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
+                                                    <exclude reference="w9b-rW-TzM"/>
+                                                    <exclude reference="Fa0-b1-9Zt"/>
+                                                    <exclude reference="whX-nS-lBT"/>
                                                     <exclude reference="vVS-7a-NUc"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
+                                                    <include reference="w9b-rW-TzM"/>
+                                                    <include reference="Fa0-b1-9Zt"/>
+                                                    <include reference="whX-nS-lBT"/>
                                                     <include reference="vVS-7a-NUc"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label상품명" destination="vVS-7a-NUc" id="q4C-ba-MnH"/>
+                                            <outlet property="label카운트" destination="whX-nS-lBT" id="TOA-v1-dr0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZV1-DU-ibh" id="4zB-v2-Nhu"/>
+                                    <outlet property="delegate" destination="ZV1-DU-ibh" id="Jxv-rY-Zaa"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,7 +245,6 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="DDV-5x-Zp6"/>
-                                <exclude reference="WVz-bN-qrT"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ecv-pW-Ifz"/>
@@ -235,6 +273,9 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title=" 장바구니" image="Shopping Cart Filled-32.png" id="Wz1-Qa-hPa"/>
+                    <connections>
+                        <outlet property="table카트" destination="WVz-bN-qrT" id="LAA-SS-2CR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yur-21-yaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,6 +376,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Minus-32.png" width="32" height="32"/>
+        <image name="Plus-32.png" width="32" height="32"/>
         <image name="Shopping Cart Filled-32.png" width="32" height="32"/>
         <image name="View Details-32.png" width="32" height="32"/>
         <image name="shopping-cart.png" width="48" height="48"/>

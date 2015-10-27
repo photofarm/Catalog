@@ -34,6 +34,9 @@
 		33AADC211BD8BE6000FBF1BF /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AADC201BD8BE6000FBF1BF /* ProductCell.swift */; };
 		33AADC231BD8C0B300FBF1BF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AADC221BD8C0B300FBF1BF /* Product.swift */; };
 		33AADC251BD8CB8200FBF1BF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AADC241BD8CB8200FBF1BF /* Cart.swift */; };
+		33E852721BDF0F2400A04030 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E852711BDF0F2400A04030 /* CartCell.swift */; };
+		33E852AF1BDF21C600A04030 /* Minus-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E852AD1BDF21C600A04030 /* Minus-32.png */; };
+		33E852B01BDF21C600A04030 /* Plus-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E852AE1BDF21C600A04030 /* Plus-32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		33AADC201BD8BE6000FBF1BF /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		33AADC221BD8C0B300FBF1BF /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		33AADC241BD8CB8200FBF1BF /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		33E852711BDF0F2400A04030 /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		33E852AD1BDF21C600A04030 /* Minus-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus-32.png"; sourceTree = "<group>"; };
+		33E852AE1BDF21C600A04030 /* Plus-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus-32.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 				33AADC241BD8CB8200FBF1BF /* Cart.swift */,
 				33741C791BDE1240006E963C /* CartViewController.swift */,
 				33741C7B1BDE12DB006E963C /* DetailViewController.swift */,
+				33E852711BDF0F2400A04030 /* CartCell.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -177,6 +184,8 @@
 		33AADC1D1BD8BD4900FBF1BF /* products */ = {
 			isa = PBXGroup;
 			children = (
+				33E852AD1BDF21C600A04030 /* Minus-32.png */,
+				33E852AE1BDF21C600A04030 /* Plus-32.png */,
 				33741C751BDE0CA2006E963C /* Shopping Cart Filled-32.png */,
 				33741C761BDE0CA2006E963C /* View Details-32.png */,
 				33AADC051BD8BD4000FBF1BF /* Baseball.png */,
@@ -310,10 +319,12 @@
 				33AADC1A1BD8BD4000FBF1BF /* TableTennis.png in Resources */,
 				33AADBE21BD8BBF800FBF1BF /* LaunchScreen.storyboard in Resources */,
 				33AADC191BD8BD4000FBF1BF /* Shuttlecock.png in Resources */,
+				33E852AF1BDF21C600A04030 /* Minus-32.png in Resources */,
 				33741C771BDE0CA2006E963C /* Shopping Cart Filled-32.png in Resources */,
 				33AADC111BD8BD4000FBF1BF /* Baseball.png in Resources */,
 				33AADC1B1BD8BD4000FBF1BF /* Tennis.png in Resources */,
 				33AADBDF1BD8BBF800FBF1BF /* Assets.xcassets in Resources */,
+				33E852B01BDF21C600A04030 /* Plus-32.png in Resources */,
 				33AADBDD1BD8BBF800FBF1BF /* Main.storyboard in Resources */,
 				33AADC1C1BD8BD4000FBF1BF /* Volleyball.png in Resources */,
 				33AADC121BD8BD4000FBF1BF /* Basketball.png in Resources */,
@@ -344,6 +355,7 @@
 				33AADC211BD8BE6000FBF1BF /* ProductCell.swift in Sources */,
 				33AADC231BD8C0B300FBF1BF /* Product.swift in Sources */,
 				33AADC251BD8CB8200FBF1BF /* Cart.swift in Sources */,
+				33E852721BDF0F2400A04030 /* CartCell.swift in Sources */,
 				33AADBDA1BD8BBF800FBF1BF /* ViewController.swift in Sources */,
 				33741C7A1BDE1240006E963C /* CartViewController.swift in Sources */,
 				33AADBD81BD8BBF800FBF1BF /* AppDelegate.swift in Sources */,
