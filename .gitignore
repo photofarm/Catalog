@@ -5,8 +5,10 @@ Catalog.xcworkspace/contents.xcworkspacedata
 
 Podfile.lock
 
-Podfile
-
-Podfile.lock
+Catalog.xcworkspace/xcuserdata/sdt5.xcuserdatad/UserInterfaceState.xcuserstate
 
 Podfile
+
+*.lock
+
+*.xcuserstate
