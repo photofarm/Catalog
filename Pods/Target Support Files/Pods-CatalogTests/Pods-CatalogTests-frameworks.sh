@@ -84,14 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-Catalog/Alamofire.framework"
-  install_framework "Pods-Catalog/Realm.framework"
-  install_framework "Pods-Catalog/RealmSwift.framework"
-  install_framework "Pods-Catalog/SwiftyJSON.framework"
+  install_framework "Pods-CatalogTests/Alamofire.framework"
+  install_framework "Pods-CatalogTests/Realm.framework"
+  install_framework "Pods-CatalogTests/RealmSwift.framework"
+  install_framework "Pods-CatalogTests/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-Catalog/Alamofire.framework"
-  install_framework "Pods-Catalog/Realm.framework"
-  install_framework "Pods-Catalog/RealmSwift.framework"
-  install_framework "Pods-Catalog/SwiftyJSON.framework"
+  install_framework "Pods-CatalogTests/Alamofire.framework"
+  install_framework "Pods-CatalogTests/Realm.framework"
+  install_framework "Pods-CatalogTests/RealmSwift.framework"
+  install_framework "Pods-CatalogTests/SwiftyJSON.framework"
 fi

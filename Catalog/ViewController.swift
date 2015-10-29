@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	var numberOfSections : Int = 1
 
 	func addCart(productCode: String, productName : String) {
-		Cart.sharedInstance.addCart(productName)
+		Cart.sharedInstance.addCart(productName, prodCount: 1)
 		
 		print(productCode)
 	}

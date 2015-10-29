@@ -107,10 +107,10 @@
                                 <exclude reference="LOG-P0-shf"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="J8w-Qa-a20"/>
                                 <exclude reference="8kh-Bv-fap"/>
                                 <exclude reference="KGL-KM-Z3q"/>
                                 <exclude reference="d04-J8-Om8"/>
-                                <exclude reference="J8w-Qa-a20"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -118,10 +118,10 @@
                                 <include reference="LOG-P0-shf"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="J8w-Qa-a20"/>
                                 <include reference="8kh-Bv-fap"/>
                                 <include reference="KGL-KM-Z3q"/>
                                 <include reference="d04-J8-Om8"/>
-                                <include reference="J8w-Qa-a20"/>
                             </mask>
                         </variation>
                     </view>
@@ -154,11 +154,12 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HWW-t3-r3f"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WVz-bN-qrT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WVz-bN-qrT">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CART_CELL" rowHeight="66" id="Id3-oI-Njh" customClass="CartCell" customModule="Catalog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Id3-oI-Njh" id="fQK-h4-Obt">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="65"/>
@@ -247,13 +248,13 @@
                                 <exclude reference="DDV-5x-Zp6"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ecv-pW-Ifz"/>
                                 <exclude reference="GHS-vI-LgP"/>
                                 <exclude reference="NRS-kd-btp"/>
                                 <exclude reference="xbo-6W-QFE"/>
                                 <exclude reference="CZe-MI-d8g"/>
                                 <exclude reference="QoE-Qk-xDg"/>
                                 <exclude reference="l0Z-sG-dkl"/>
+                                <exclude reference="ecv-pW-Ifz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -262,13 +263,13 @@
                                 <include reference="WVz-bN-qrT"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ecv-pW-Ifz"/>
                                 <include reference="GHS-vI-LgP"/>
                                 <include reference="NRS-kd-btp"/>
                                 <include reference="xbo-6W-QFE"/>
                                 <include reference="CZe-MI-d8g"/>
                                 <include reference="QoE-Qk-xDg"/>
                                 <include reference="l0Z-sG-dkl"/>
+                                <include reference="ecv-pW-Ifz"/>
                             </mask>
                         </variation>
                     </view>

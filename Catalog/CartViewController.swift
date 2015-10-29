@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CartCellDelegate {
+class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CartCellDelegate, MyCartDelegate {
 
     @IBOutlet weak var table카트: UITableView!
 
@@ -18,6 +18,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Do any additional setup after loading the view.
     }
 
+	func reloadData() {
+		table카트.reloadData()
+	}
+	
 	func addProduct(prodName: String) {
 		
 	}
@@ -39,18 +43,23 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		let 행수 = Cart.sharedInstance.cartItem.count
+//		let 행수 = Cart.sharedInstance.cartItem.count
+		let 행수 = Cart.sharedInstance.myCart.count
+		print(행수)
 
 		return 행수
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("CART_CELL", forIndexPath: indexPath) as! CartCell
-		let 상품명 = Cart.sharedInstance.cartItem[indexPath.row].prodName
-		let 카운트 = Cart.sharedInstance.cartItem[indexPath.row].prodCount
+//		let 상품명 = Cart.sharedInstance.cartItem[indexPath.row].prodName
+//		let 카운트 = Cart.sharedInstance.cartItem[indexPath.row].prodCount
+		let 상품명 = Cart.sharedInstance.myCart[indexPath.row].prodName
+		let 카운트 = Cart.sharedInstance.myCart[indexPath.row].prodCount
 
 		cell.label상품명.text = 상품명
 		cell.label카운트.text = String(카운트)
+		print(상품명)
 
 		return cell
 	}
