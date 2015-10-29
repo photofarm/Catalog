@@ -11,11 +11,6 @@ import RealmSwift
 import Alamofire
 import SwiftyJSON
 
-struct MyCart {
-	var prodName : String
-	var prodCount : Int
-}
-
 protocol MyCartDelegate : class {
 	func reloadData()
 }
@@ -94,14 +89,16 @@ class Cart {
 		]
 		
 		// JSON Body
+		let bodyParameters = [
+			"name": prodName,
+			"count": NSNumber(integer: prodCount)
+		]
+		// Swift String <- ObjC NSString
+		// [String: AnyObject]
+
 //		let bodyParameters = [
 //			"name": prodName
-//			"count": prodCount
 //		]
-
-		let bodyParameters = [
-			"name": prodName
-		]
 		
 		let encoding = Alamofire.ParameterEncoding.JSON
 		

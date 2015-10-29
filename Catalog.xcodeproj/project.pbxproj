@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3069966A1BE19F5800AB96C8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306996691BE19F5800AB96C8 /* NetworkManager.swift */; };
 		33741C771BDE0CA2006E963C /* Shopping Cart Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 33741C751BDE0CA2006E963C /* Shopping Cart Filled-32.png */; };
 		33741C781BDE0CA2006E963C /* View Details-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 33741C761BDE0CA2006E963C /* View Details-32.png */; };
 		33741C7A1BDE1240006E963C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33741C791BDE1240006E963C /* CartViewController.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		1338EA5CCFE34C40FFF45F69 /* Pods-Catalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catalog/Pods-Catalog.debug.xcconfig"; sourceTree = "<group>"; };
 		1BFDEAFBB6FD0D6A1AC337F5 /* Pods_CatalogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatalogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		306996691BE19F5800AB96C8 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		33741C751BDE0CA2006E963C /* Shopping Cart Filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart Filled-32.png"; sourceTree = "<group>"; };
 		33741C761BDE0CA2006E963C /* View Details-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "View Details-32.png"; sourceTree = "<group>"; };
 		33741C791BDE1240006E963C /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				33741C7B1BDE12DB006E963C /* DetailViewController.swift */,
 				33E852711BDF0F2400A04030 /* CartCell.swift */,
 				33E852EF1BDF584600A04030 /* CartItem.swift */,
+				306996691BE19F5800AB96C8 /* NetworkManager.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 			files = (
 				33AADC211BD8BE6000FBF1BF /* ProductCell.swift in Sources */,
 				33AADC231BD8C0B300FBF1BF /* Product.swift in Sources */,
+				3069966A1BE19F5800AB96C8 /* NetworkManager.swift in Sources */,
 				33AADC251BD8CB8200FBF1BF /* Cart.swift in Sources */,
 				33E852721BDF0F2400A04030 /* CartCell.swift in Sources */,
 				33E852F01BDF584600A04030 /* CartItem.swift in Sources */,

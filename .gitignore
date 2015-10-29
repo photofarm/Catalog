@@ -12,3 +12,5 @@ Podfile
 *.lock
 
 *.xcuserstate
+
+Pods/
